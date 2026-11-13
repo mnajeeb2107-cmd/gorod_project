@@ -9,7 +9,6 @@
   </head>
   <body class="page">
     <header class="header" id="top">
-      <!-- TODO: сверстайте навигацию для desktop-версии -->
       <nav class="header__nav" aria-label="Основная навигация">
         <ul class="header__menu">
           <li><a class="header__link" href="#top">главная</a></li>
@@ -28,9 +27,10 @@
         <a href="mailto:hello@gorod.local">hello@gorod.local</a>
       </address>
 
-      <!-- TODO: на ширине 390 px вместо desktop-навигации показать кнопку меню -->
       <button class="menu-button" type="button" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </header>
 
@@ -66,7 +66,9 @@
                 class="story-card__art story-card__art_type_mosaic"
                 aria-hidden="true"
               >
-                <!-- TODO: экспортируйте соответствующую иллюстрацию из Figma или воспроизведите её средствами CSS -->
+                <span class="story-card__dot"></span>
+                <span class="story-card__circle"></span>
+                <span class="story-card__stripe"></span>
               </div>
               <div class="story-card__content">
                 <h3 class="story-card__title">Тихий двор с мозаикой</h3>
@@ -79,15 +81,56 @@
             </article>
           </li>
 
-          <!-- TODO: создайте ещё две карточки по макету Figma.
-               2. «Станция без поездов»
-               3. «Дом, который помнит вывески» -->
+          <li class="stories__item">
+            <article class="story-card">
+              <div
+                class="story-card__art story-card__art_type_station"
+                aria-hidden="true"
+              >
+                <span class="story-card__dot"></span>
+                <span class="story-card__circle"></span>
+                <span class="story-card__stripe"></span>
+              </div>
+              <div class="story-card__content">
+                <h3 class="story-card__title">Станция без поездов</h3>
+                <p class="story-card__text">
+                  Старая железнодорожная ветка превратилась в тихий пешеходный
+                  маршрут. Посмотрите, как индустриальные детали вписались в
+                  новый ритм района.
+                </p>
+                <a class="story-card__link" href="#0">читать историю →</a>
+              </div>
+            </article>
+          </li>
+
+          <li class="stories__item">
+            <article class="story-card">
+              <div
+                class="story-card__art story-card__art_type_signs"
+                aria-hidden="true"
+              >
+                <span class="story-card__dot"></span>
+                <span class="story-card__circle"></span>
+                <span class="story-card__stripe"></span>
+              </div>
+              <div class="story-card__content">
+                <h3 class="story-card__title">Дом, который помнит вывески</h3>
+                <p class="story-card__text">
+                  Под слоями краски на фасаде проступают старые буквы магазинов
+                  прошлого века. Изучите городскую типографику разных эпох.
+                </p>
+                <a class="story-card__link" href="#0">читать историю →</a>
+              </div>
+            </article>
+          </li>
         </ul>
       </section>
 
-      <!-- TODO: сверстайте секцию #about по макету -->
       <section class="about" id="about" aria-labelledby="about-title">
-        <div class="about__badge" aria-hidden="true"></div>
+        <div class="about__badge" aria-hidden="true">
+          <span class="about__badge-dot"></span>
+          <span class="about__badge-stripe"></span>
+        </div>
         <div class="about__content">
           <h2 class="section-title" id="about-title">О ПРОЕКТЕ</h2>
           <p class="about__text">
@@ -100,13 +143,26 @@
       </section>
     </main>
 
-    <!-- TODO: закончите footer по макету: контакты, меню, VK/TG/YT -->
     <footer class="footer">
       <address class="footer__contacts">
         <a href="tel:+79000000000">+7 900 000-00-00</a>
         <a href="mailto:hello@gorod.local">hello@gorod.local</a>
         <p>Москва, учебный маршрут</p>
       </address>
+
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <ul class="footer__menu">
+          <li><a class="footer__link" href="#top">главная</a></li>
+          <li><a class="footer__link" href="#stories">истории</a></li>
+          <li><a class="footer__link" href="#about">о проекте</a></li>
+        </ul>
+      </nav>
+
+      <ul class="footer__socials" aria-label="Социальные сети">
+        <li><a class="footer__social-link" href="#0">VK</a></li>
+        <li><a class="footer__social-link" href="#0">TG</a></li>
+        <li><a class="footer__social-link" href="#0">YT</a></li>
+      </ul>
     </footer>
   </body>
 </html>
