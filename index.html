@@ -1,168 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Город говорит — учебный проект</title>
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
-  <body class="page">
-    <header class="header" id="top">
-      <nav class="header__nav" aria-label="Основная навигация">
-        <ul class="header__menu">
-          <li><a class="header__link" href="#top">главная</a></li>
-          <li><a class="header__link" href="#stories">истории</a></li>
-          <li><a class="header__link" href="#about">о проекте</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Город говорит</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#top" class="nav__link">главная</a></li>
+          <li><a href="#stories" class="nav__link">истории</a></li>
+          <li><a href="#about" class="nav__link">о проекте</a></li>
         </ul>
       </nav>
 
-      <a class="logo" href="#top" aria-label="Город говорит — на главную">
-        <span class="logo__mark" aria-hidden="true"></span>
+      <a href="#top" class="logo">
+        <span class="logo__icon" aria-hidden="true"></span>
         <span class="logo__text">ГОРОД ГОВОРИТ</span>
       </a>
 
-      <address class="header__contacts">
-        <a href="tel:+79000000000">+7 900 000-00-00</a>
-        <a href="mailto:hello@gorod.local">hello@gorod.local</a>
-      </address>
+      <div class="header__contacts">
+        <a href="tel:+79000000000" class="header__contact-link">+7 900 000-00-00</a>
+        <a href="mailto:hello@gorod.local" class="header__contact-link">hello@gorod.local</a>
+      </div>
 
-      <button class="menu-button" type="button" aria-label="Открыть меню">
+      <button class="burger-btn" type="button" aria-label="Открыть меню">
         <span></span>
         <span></span>
         <span></span>
       </button>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__decor" aria-hidden="true">
-          <span class="hero__circle"></span>
-          <span class="hero__bar"></span>
-          <span class="hero__dot"></span>
+  <main id="top">
+    <!-- Hero-блок -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__card">
+          <div class="hero__shapes" aria-hidden="true">
+            <div class="shape shape--yellow"></div>
+            <div class="shape shape--orange"></div>
+            <div class="shape shape--green"></div>
+          </div>
+
+          <h1 class="hero__title">
+            <span>ГОРОД</span>
+            <span class="hero__title-offset">ГОВОРИТ</span>
+            <span class="hero__title-right">С НАМИ</span>
+          </h1>
+
+          <div class="hero__bottom">
+            <p class="hero__subtitle">Маршруты по местам, которые легко пройти и мимо</p>
+            <a href="#stories" class="btn-cta">Открыть маршрут</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <h1 class="hero__title" id="hero-title">
-          <span>ГОРОД</span>
-          <span>ГОВОРИТ</span>
-          <span>С НАМИ</span>
-        </h1>
+    <!-- Секция историй -->
+    <section id="stories" class="stories">
+      <div class="container">
+        <h2 class="section-title">ИСТОРИИ</h2>
 
-        <div class="hero__bottom">
-          <p class="hero__subtitle">
-            Маршруты по местам, которые легко пройти мимо
-          </p>
-          <a class="button button_primary" href="#stories">Открыть маршрут</a>
+        <div class="stories__grid">
+          <!-- Карточка 1 -->
+          <article class="story-card">
+            <div class="story-card__cover story-card__cover--1" aria-hidden="true">
+              <div class="cover-shape c1-yellow"></div>
+              <div class="cover-shape c1-orange"></div>
+              <div class="cover-shape c1-blue"></div>
+            </div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">Тихий двор с мозаикой</h3>
+              <p class="story-card__text">
+                Во дворе обычного дома сохранилась авторская мозаика 1970-х. Найдите её и разберите, как цвет меняет ощущение пространства.
+              </p>
+              <a href="#" class="story-card__link">читать историю →</a>
+            </div>
+          </article>
+
+          <!-- Карточка 2 -->
+          <article class="story-card">
+            <div class="story-card__cover story-card__cover--2" aria-hidden="true">
+              <div class="cover-shape c2-orange"></div>
+              <div class="cover-shape c2-blue"></div>
+              <div class="cover-shape c2-yellow"></div>
+            </div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">Станция без поездов</h3>
+              <p class="story-card__text">
+                Бывшая грузовая платформа стала общественным пространством. История о том, как функция места меняется вместе с городом.
+              </p>
+              <a href="#" class="story-card__link">читать историю →</a>
+            </div>
+          </article>
+
+          <!-- Карточка 3 -->
+          <article class="story-card">
+            <div class="story-card__cover story-card__cover--3" aria-hidden="true">
+              <div class="cover-shape c3-green"></div>
+              <div class="cover-shape c3-blue"></div>
+              <div class="cover-shape c3-orange"></div>
+            </div>
+            <div class="story-card__body">
+              <h3 class="story-card__title">Дом, который помнит вывески</h3>
+              <p class="story-card__text">
+                На фасаде видны слои старых надписей. Это хороший повод поговорить о визуальной памяти улицы и типографике.
+              </p>
+              <a href="#" class="story-card__link">читать историю →</a>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="stories" id="stories" aria-labelledby="stories-title">
-        <h2 class="section-title" id="stories-title">ИСТОРИИ</h2>
+    <!-- Секция О проекте -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about__card">
+          <div class="about__shapes" aria-hidden="true">
+            <div class="about-shape about-shape--orange"></div>
+            <div class="about-shape about-shape--yellow"></div>
+          </div>
 
-        <ul class="stories__list">
-          <li class="stories__item">
-            <article class="story-card">
-              <div
-                class="story-card__art story-card__art_type_mosaic"
-                aria-hidden="true"
-              >
-                <span class="story-card__dot"></span>
-                <span class="story-card__circle"></span>
-                <span class="story-card__stripe"></span>
-              </div>
-              <div class="story-card__content">
-                <h3 class="story-card__title">Тихий двор с мозаикой</h3>
-                <p class="story-card__text">
-                  Во дворе обычного дома сохранилась авторская мозаика 1970-х.
-                  Найдите её и разберите, как цвет меняет ощущение пространства.
-                </p>
-                <a class="story-card__link" href="#0">читать историю →</a>
-              </div>
-            </article>
-          </li>
-
-          <li class="stories__item">
-            <article class="story-card">
-              <div
-                class="story-card__art story-card__art_type_station"
-                aria-hidden="true"
-              >
-                <span class="story-card__dot"></span>
-                <span class="story-card__circle"></span>
-                <span class="story-card__stripe"></span>
-              </div>
-              <div class="story-card__content">
-                <h3 class="story-card__title">Станция без поездов</h3>
-                <p class="story-card__text">
-                  Старая железнодорожная ветка превратилась в тихий пешеходный
-                  маршрут. Посмотрите, как индустриальные детали вписались в
-                  новый ритм района.
-                </p>
-                <a class="story-card__link" href="#0">читать историю →</a>
-              </div>
-            </article>
-          </li>
-
-          <li class="stories__item">
-            <article class="story-card">
-              <div
-                class="story-card__art story-card__art_type_signs"
-                aria-hidden="true"
-              >
-                <span class="story-card__dot"></span>
-                <span class="story-card__circle"></span>
-                <span class="story-card__stripe"></span>
-              </div>
-              <div class="story-card__content">
-                <h3 class="story-card__title">Дом, который помнит вывески</h3>
-                <p class="story-card__text">
-                  Под слоями краски на фасаде проступают старые буквы магазинов
-                  прошлого века. Изучите городскую типографику разных эпох.
-                </p>
-                <a class="story-card__link" href="#0">читать историю →</a>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <section class="about" id="about" aria-labelledby="about-title">
-        <div class="about__badge" aria-hidden="true">
-          <span class="about__badge-dot"></span>
-          <span class="about__badge-stripe"></span>
+          <div class="about__content">
+            <h2 class="about__title">О ПРОЕКТЕ</h2>
+            <p class="about__text">
+              «Город говорит» — учебный медиапроект о деталях городской среды. Он предлагает смотреть на привычные улицы как на набор историй: замечать типографику, архитектуру, следы прошлого и новые сценарии использования пространства. Макет специально построен так, чтобы его можно было сверстать без сложного JavaScript, но с полноценной адаптивностью.
+            </p>
+          </div>
         </div>
-        <div class="about__content">
-          <h2 class="section-title" id="about-title">О ПРОЕКТЕ</h2>
-          <p class="about__text">
-            «Город говорит» — учебный медиапроект о деталях городской среды. Он
-            предлагает смотреть на привычные улицы как на набор историй:
-            замечать типографику, архитектуру, следы прошлого и новые сценарии
-            использования пространства.
-          </p>
-        </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <address class="footer__contacts">
-        <a href="tel:+79000000000">+7 900 000-00-00</a>
-        <a href="mailto:hello@gorod.local">hello@gorod.local</a>
-        <p>Москва, учебный маршрут</p>
-      </address>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__contacts">
+        <a href="tel:+79000000000" class="footer__link">+7 900 000-00-00</a>
+        <a href="mailto:hello@gorod.local" class="footer__link">hello@gorod.local</a>
+        <p class="footer__address">Москва, учебный маршрут</p>
+      </div>
 
       <nav class="footer__nav" aria-label="Навигация в подвале">
-        <ul class="footer__menu">
-          <li><a class="footer__link" href="#top">главная</a></li>
-          <li><a class="footer__link" href="#stories">истории</a></li>
-          <li><a class="footer__link" href="#about">о проекте</a></li>
+        <ul class="footer__nav-list">
+          <li><a href="#top" class="footer__link">главная</a></li>
+          <li><a href="#stories" class="footer__link">истории</a></li>
+          <li><a href="#about" class="footer__link">о проекте</a></li>
         </ul>
       </nav>
 
-      <ul class="footer__socials" aria-label="Социальные сети">
-        <li><a class="footer__social-link" href="#0">VK</a></li>
-        <li><a class="footer__social-link" href="#0">TG</a></li>
-        <li><a class="footer__social-link" href="#0">YT</a></li>
-      </ul>
-    </footer>
-  </body>
+      <div class="footer__socials">
+        <a href="#" class="social-badge" aria-label="ВКонтакте">ВК</a>
+        <a href="#" class="social-badge" aria-label="Telegram">ТГ</a>
+        <a href="#" class="social-badge" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
